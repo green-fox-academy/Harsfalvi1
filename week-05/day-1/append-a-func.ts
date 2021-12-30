@@ -4,9 +4,9 @@
 // -  Print the result of `appendA(typo)`
 
 let typo: string= 'Chinchill'
-function appendA(character:string) {
-    return typo += character;   
+function appendA(character:string): string {
+    typo += "a";
+    return typo;   
 }
-appendA("a");
+console.log(appendA(typo));
 
-console.log(typo);

@@ -3,4 +3,11 @@
 // -  Swap the first and the third element of `names`
 
 let names: string [] = ["Arthur", "Boe", "Chloe"];
-console.log([names[0],names[1],names[2]]=[names[2],names[1],names[0]]);
+/*console.log([names[0],names[1],names[2]]=[names[2],names[1],names[0]]);*/
+
+let temporal: string = names[0]
+names[0] = names[2];
+names[2] = temporal ;
+
+ 
+console.log(names);
