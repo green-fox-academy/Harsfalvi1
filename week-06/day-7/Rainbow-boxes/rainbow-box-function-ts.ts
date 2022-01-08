@@ -11,41 +11,20 @@ export { };
 // and draws a square of that size and color to the center of the canvas.
 // Create a loop that fills the canvas with a rainbow of colored squares.
 
-/*function drawRainbowBoxes(rectWidth: number, rectHeight: number) {
-    let positionX = 0;
-    let positionY = 0;
-    for (let rectCounter = 0; rectCounter < 18; rectCounter++) {
-        
-        ctx.strokeRect(positionX, positionY, rectWidth, rectHeight);
-        positionX += 10;
-        positionY += 10;
-        rectWidth -= 20;
-        rectHeight -= 20;
-
-    }
+let sqSize: number = 50;
+let rainColors: string[] = ["red", "green", "aqua", "magenta", "yellow", "blue"];
+function rainbowSQ(squareSize: number, sqColor: string) {
+    ctx.strokeStyle = sqColor;
+    let startxx: number = canvas.width / 2 - squareSize / 2;
+    let startyy: number = canvas.height / 2 - squareSize / 2;
+    ctx.strokeRect(startxx, startyy, squareSize, squareSize);
 }
-drawRainbowBoxes(canvas.width, canvas.height)  */
-        
-            
-    
-function drawRainbowBoxes(rectWidth: number, rectHeight: number, color: string) {
-    let positionX = 0;
-    let positionY = 0;
-    ctx.strokeStyle = color;
-    ctx.strokeRect(positionX, positionY, rectWidth, rectHeight);
-    let rainbow: string [] = ['red', 'orange', 'yellow', "green", 'blue', 'indigo', 'purple'];
-    positionX += 10;
-        positionY += 10;
-    
-    for (let rectCounter = 0; rectCounter < 18; rectCounter++) {
-        for (let i = 0; i < rainbow.length; i++) {
-        
-        rectWidth -= 20;
-        rectHeight -= 20;
-        drawRainbowBoxes(canvas.width, canvas.height, rainbow[i])
-    };
-    
-};
-  
 
+function generateRandomNum(maxNum): number {
+    let randomNum: number = Math.floor(Math.random() * maxNum);
+    return randomNum;
+}
+for (let i: number = 0; i < canvas.height; i += 20) {
+    let randomNum: number = generateRandomNum(rainColors.length);
+    rainbowSQ(sqSize + i, rainColors[randomNum]);
 }

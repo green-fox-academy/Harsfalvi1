@@ -12,28 +12,25 @@ export { };
 // Make decision about the color in the function
 
 
+let startX: number = 0;
+let startY: number = 0;
 
-function drawDiagonal(canvasWidth: number = canvas.width, canvasHeight: number = canvas.height) {
-   
-
-    if (canvasHeight-canvasHeight || canvasWidth) {
+function drawDiagonal(x: number, y: number) {
+    if (x === y) {
         ctx.strokeStyle = 'green';
         ctx.beginPath();
-        ctx.moveTo(canvasWidth - canvasWidth, canvasHeight - canvasHeight);
-        ctx.lineTo(canvasWidth, canvasHeight);
+        ctx.moveTo(x, y);
+        ctx.lineTo(canvas.width, canvas.height);
         ctx.stroke();
-    } /*else {
+    } else {
+        console.log(x,y)
         ctx.strokeStyle = 'red';
         ctx.beginPath();
-        ctx.moveTo(canvasWidth - canvasWidth, canvasHeight);
-        ctx.lineTo(canvasWidth, canvasHeight - canvasHeight);
-        ctx.stroke(); az else-n belül nem rajzolja meg, csak kívül
-    }*/
-    ctx.strokeStyle = 'red';
-    ctx.beginPath();
-    ctx.moveTo(canvasWidth - canvasWidth, canvasHeight);
-    ctx.lineTo(canvasWidth, canvasHeight - canvasHeight);
-    ctx.stroke(); 
+        ctx.moveTo(x, y);
+        ctx.lineTo(0, canvas.height);
+        ctx.stroke();
+    }
 }
 
-drawDiagonal();
+drawDiagonal(startX, startY);
+drawDiagonal(canvas.width, 0);
