@@ -12,9 +12,5 @@ import { Animal } from "./animal";
 let tiger = new Animal();
 let cat = new Animal();
 
-tiger.eat();
-tiger.drink();
-tiger.play();
-
-cat.play();
-cat.play();
+tiger.getHunger();
+cat.getHunger();
