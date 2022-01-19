@@ -7,12 +7,12 @@ const fs = require("fs");
 function copyContent(sourceFileName: string, newFileName: string): boolean {
   try {
     const fileContent: string = fs.readFileSync(sourceFileName, "utf-8");
-    const newFileContent: string = fs.writeFileSync(newFileName, fileContent);
+    fs.writeFileSync(newFileName, fileContent);
+    return true;
 
-    fileContent === newFileContent;
   } catch (error) {
     console.error(error);
+    return false
   }
-  return true;
 }
 console.log(copyContent("my-file.txt", "my-new-file.txt"));
