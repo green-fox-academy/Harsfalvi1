@@ -14,15 +14,9 @@ let wildPokemon: Pokemon = new Pokemon("Oddish", "grass", "water");
 
 // Implement the following `chooseEffective` function which will choose the most effective pokemon for Ash
 
-function chooseEffective(
-  pokemonList: Pokemon[],
-  enemyPokemon: Pokemon
-): string {
+function chooseEffective(pokemonList: Pokemon[], enemyPokemon: Pokemon): string {
   for (
-    let pokemonCounter = 0;
-    pokemonCounter < pokemonList.length;
-    pokemonCounter++
-  ) {
+    let pokemonCounter = 0; pokemonCounter < pokemonList.length; pokemonCounter++) {
     if (enemyPokemon.type === pokemonList[pokemonCounter].effectiveAgainst) {
       return pokemonList[pokemonCounter].name;
     }

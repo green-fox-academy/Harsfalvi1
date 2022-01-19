@@ -17,8 +17,9 @@ export class Sharpie {
     this.width = width;
   }
   use() {
-    return (this.inkAmount += 10);
+    return (this.inkAmount -= 10);
   }
+  
   getInkamount(): number {
     return this.inkAmount;
   }

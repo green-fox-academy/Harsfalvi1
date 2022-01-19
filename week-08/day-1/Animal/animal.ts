@@ -15,17 +15,21 @@ export class Animal {
     this.thirst = 50;
   }
   eat() {
-    return (this.hunger -= 1);
+    this.hunger -= 1;
   }
+
   drink() {
-    return (this.thirst -= 1);
+    this.thirst -= 1;
   }
+
   play() {
-    return (this.hunger += 1), (this.thirst += 1);
+    this.hunger += 1, this.thirst += 1;
   }
+
   getHunger(): number {
     return this.hunger;
   }
+
   getThirst(): number {
     return this.thirst;
   }

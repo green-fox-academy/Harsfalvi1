@@ -9,12 +9,7 @@ export class BlogPost {
   private text: string;
   private publicationDate: Date;
 
-  constructor(
-    authorName: string,
-    title: string,
-    text: string,
-    publicationDate: Date
-  ) {
+  constructor(authorName: string, title: string, text: string, publicationDate: Date) {
     this.authorName = authorName;
     this.title = title;
     this.text = text;

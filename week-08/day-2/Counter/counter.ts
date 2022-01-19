@@ -26,13 +26,15 @@ export class Counter {
     this.counter = counter ? counter : 0;
     this.initialCounter = this.counter;
   }
+
   add(number?: number) {
     this.counter += number ? number : 1;
-    return this.counter;
   }
+
   get() {
     return this.counter;
   }
+
   reset() {
     this.counter = this.initialCounter;
   }

@@ -15,4 +15,3 @@ let oldSharpie = new Sharpie("red", 0.8);
 
 myFavoritesharpie.use();
 oldSharpie.use();
-//myFavoritesharpie.getInkamount();

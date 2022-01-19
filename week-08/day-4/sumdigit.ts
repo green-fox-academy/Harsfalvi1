@@ -5,4 +5,5 @@ function sumOfDigit(n: number): number {
   }
   return (n % 10) + sumOfDigit(Math.floor(n / 10));
 }
+
 console.log(sumOfDigit(1985));
