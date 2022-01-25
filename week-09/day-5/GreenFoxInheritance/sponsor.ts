@@ -1,4 +1,5 @@
 'use strict';
+
 import { Person } from "./person";
 
 export class Sponsor extends Person {
@@ -13,7 +14,7 @@ export class Sponsor extends Person {
     }
 
     introduce(): void {
-        console.log(super.getIntroduction() + this.hiredStudents + "students so far.");
+        console.log(super.getIntroduction() + " " + this.hiredStudents + " students so far. ");
     }
     hire(): number {
         return this.hiredStudents ++

@@ -1,6 +1,6 @@
 'use strict';
-import { Person } from "./person";
 
+import { Person } from "./person";
 
 export class Mentor extends Person {
     protected level: string;
@@ -10,11 +10,10 @@ export class Mentor extends Person {
         this.level = level;
     }
 
-    public introduce(): void {
-        console.log(super.getIntroduction() + this.gender + this.level + "mentor.");
+    introduce(): void {
+        console.log(super.getIntroduction() + " " + this.level + " mentor. ");
     }
-
-    public getGoal(): void {
+    getGoal(): void {
         console.log ("My goal is: Educate brilliant junior software developers.")
     }
 }

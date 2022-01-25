@@ -27,17 +27,13 @@ export class Cohort {
       this.mentors = [];
     }
 
-    //methods:
     addStudent(student:Student): void {
         this.students.push(student);
       }
-    
     addMentor(mentor: Mentor): void {
         this.mentors.push(mentor)
     } 
-
     info(): void {
-        console.log("The" + this.name + "cohort has"+ Student.length + "students and" + Mentor.length + "mentors.")
-    }
-   
+        console.log("The " + this.name + " cohort has "+ Student.length + " students and " + Mentor.length + " mentors. ")
+    }   
 }
