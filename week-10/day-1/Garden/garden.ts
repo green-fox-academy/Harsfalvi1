@@ -8,16 +8,17 @@ import { Plant } from "./plant";
 import os from 'os';
 
 export class Garden {
-  listOfPlants: Plant[] = [];
+  private listOfPlants: Plant[] = [];
 
   constructor() {
     this.listOfPlants = [];
   }
 
-  addPlant(plant: Plant) {
+  addPlant(plant: Plant): void {
     this.listOfPlants.push(plant);
   }
-  waterTotalWater(water: number) {
+
+  waterTotalWater(water: number): void {
     console.log(os.EOL + "Watering with " + water);
     let plantsThatNeedWater = 0;
     for (let index = 0; index < this.listOfPlants.length; index++) {
@@ -25,11 +26,13 @@ export class Garden {
         plantsThatNeedWater++;
       }
     }
+    
     for (let j = 0; j < this.listOfPlants.length; j++) {
       this.listOfPlants[j].receiveWater(water / plantsThatNeedWater);
     }
   }
-  checkallPlantstatus() {
+
+  checkallPlantstatus(): void {
     for (let i = 0; i < this.listOfPlants.length; i++) {
       this.listOfPlants[i].logStatus();
     }

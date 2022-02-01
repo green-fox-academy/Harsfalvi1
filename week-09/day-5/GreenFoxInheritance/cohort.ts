@@ -15,24 +15,27 @@ Cohort(name): beside the given parameter it sets students and mentors as empty l
 
 import { Student } from "./student";
 import { Mentor } from "./mentor"
+import { Person } from "./person";
 
 export class Cohort {
-    protected name: string;
-    protected students: Student[];
-    protected mentors: Mentor[];
-  
-    constructor(name: string, students?: Student [], mentors?: Mentor []) {
+    private name: string;
+    private students: Student[];
+    private mentors: Mentor[];
+    
+    constructor(name: string) {
       this.name = name;
       this.students = [];
       this.mentors = [];
     }
-
+    
     addStudent(student:Student): void {
         this.students.push(student);
       }
-    addMentor(mentor: Mentor): void {
+    
+      addMentor(mentor: Mentor): void {
         this.mentors.push(mentor)
     } 
+    
     info(): void {
         console.log("The " + this.name + " cohort has "+ Student.length + " students and " + Mentor.length + " mentors. ")
     }   

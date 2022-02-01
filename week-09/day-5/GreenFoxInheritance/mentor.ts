@@ -3,7 +3,7 @@
 import { Person } from "./person";
 
 export class Mentor extends Person {
-    protected level: string;
+    private level: string;
 
     constructor(name: string = "Jane Doe", age: number = 30, gender: string = "female", level: string = "intermediate") {
         super(name, age, gender);
@@ -13,6 +13,7 @@ export class Mentor extends Person {
     introduce(): void {
         console.log(super.getIntroduction() + " " + this.level + " mentor. ");
     }
+    
     getGoal(): void {
         console.log ("My goal is: Educate brilliant junior software developers.")
     }
