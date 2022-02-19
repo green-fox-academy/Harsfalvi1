@@ -1,6 +1,6 @@
-import { ElectricGuitar}  from "./instrument"
-import { BassGuitar } from "./instrument"
-import { Violin } from "./instrument"
+import { ElectricGuitar}  from "./electricguitar"
+import { BassGuitar } from "./bassguitar"
+import { Violin } from "./violin"
 
 /*console.log(
     'Test 1, create Electric Guitar, Bass Guitar and Violin with default strings.'

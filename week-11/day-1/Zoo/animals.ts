@@ -30,7 +30,7 @@ export abstract class Animal {
     protected gender: Gender;
     protected color: string;
 
-    constructor(name: string, age: number = 0, gender: Gender = Gender.Female, color: string = "white") {
+    constructor(name: string, age: number = 0, gender: Gender = Gender.Female, color: string) {
         this.name = name;
         this.age = age;
         this.gender = gender;

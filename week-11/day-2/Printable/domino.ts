@@ -8,8 +8,8 @@ The domino should have the following string representation: Domino A side: 3, B 
 The todo should have the following string representation: Task: Buy milk | Priority: high | Done: true*/
 import { Printable } from "./printable";
 export class Domino implements Printable {
-    aSide: number;
-    bSide: number;
+    private aSide: number;
+    private bSide: number;
 
     constructor (aSide: number, bSide: number){
         this.aSide = aSide;

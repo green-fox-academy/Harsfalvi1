@@ -1,11 +1,20 @@
 import { Instrument } from "./instrument";
 
-export abstract class StringedInstrument extends Instrument {
-    protected numberOfStrings: number;
+export class StringedInstrument extends Instrument {
 
-   constructor(name: string, numberOfStrings: number = 6){
-      super(name) 
-   this.numberOfStrings = numberOfStrings
-   }
-    abstract sound():void
+    private numberOfStrings: number;
+    protected soundOfInstrument: string;
+
+    constructor(name: string, numberOfStrings: number, soundOfInstrument: string) {
+        super(name)
+        this.numberOfStrings = numberOfStrings;
+        this.soundOfInstrument = soundOfInstrument;
+    }
+   
+    sound(): string {
+        return this.soundOfInstrument;
+    }
+    play(): string { 
+        return this.name + ', a ' + this.numberOfStrings + "-stringed instrument that goes " + this.soundOfInstrument
+    }
 }
