@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Delayed Click</title>
+</head>
+
+<body>
+    <button>Click</button>
+    <div></div>
+    <script>
+        //Create a simple HTML document with one button. 
+        //If the user clicks the button it should wait 2 seconds and it should show a text under the button: 2 seconds ellapsed
+        window.addEventListener('DOMContentLoaded', () => {
+            const button = document.querySelector('button');
+            button.addEventListener('click', () => {
+                const div = document.querySelector('div');
+                div.textContent = '';
+                setTimeout(() => {
+                    div.textContent = '2 seconds elapsed';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
