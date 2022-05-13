@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    grid-gap: 10px;
+    background-color: #000;
+}
+
+.item-p {
+    background-color: blueviolet;
+}
+
+.item-g {
+    background-color: lime;
+    grid-area: 1/2/3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-y {
+    background-color: yellow;
+    width: 50%;
+    height: 200px;
+}
