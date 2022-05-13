@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <title>Newsletter</title>
+</head>
+
+<body>
+  <!--The frontend should send the form via POST method to the backend service.
+Action should be http://localhost:3000/signup-->
+  <form action="http://localhost:3000/signup" method="POST" id="subscribe">
+    <h1>Subscribe to our newsletter</h1>
+    <!--Create a simple form featuring two fields: Name (call it username), Email (call it email)-->
+    <label for="username">Full name</label>
+    <input type="text" name="username" id="username" placeholder="name" required />
+    <!--Both fields should be required via HTML5 form validation-->
+    <label for="email">Email address</label>
+    <input type="email" name="email" id="email" placeholder="email" required />
+    <input type="submit" value="Sign up!" />
+  </form>
+</body>
+
+</html>
