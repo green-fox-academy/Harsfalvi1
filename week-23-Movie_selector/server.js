@@ -36,6 +36,7 @@ app.get("/api/genres", (req, res) => {
 
 app.get("/api/movies", (req, res) => {
   const params = [req.query.genre_id || "%"];
+  //http://localhost:3000/api/movies/?genre_id=1
   pool.query(
     "SELECT * FROM movies WHERE genres_id LIKE ?",
     params,
@@ -49,6 +50,7 @@ app.get("/api/movies", (req, res) => {
     }
   );
 });
+
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
