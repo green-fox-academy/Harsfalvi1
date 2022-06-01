@@ -29,9 +29,6 @@ pool.connect((err) => {
   console.log("Connection established");
 });
 
-app.get("/", function (req, res) {
-  res.send(req.headers);
-});
 
 app.get("/posts", (req, res) => {
   conn.query("SELECT * FROM posts", (err, posts) => {
@@ -105,7 +102,7 @@ app.post("/posts2", (req, res) => {
 
 app.put("/posts/:id/upvote", (req, res) => {
   const { id } = req.params;
-  if (isNaN(+id)) {
+  if (isNaN(id)) {
     return res.status(400).send({
       error: "Id number error",
     });

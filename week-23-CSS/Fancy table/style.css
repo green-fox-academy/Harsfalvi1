@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(81, 81, 241);
+  font-family: Arial;
+}
+
+table {
+  margin: 30px auto;
+  width: 800px;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: black;
+  color: gainsboro;
+  border-bottom: 4px solid grey;
+}
+
+th,
+td {
+  font-weight: normal;
+  padding: 30px;
+  text-align: left;
+  font-size: 28px;
+}
+
+th:first-child {
+  border-right: 2px solid grey;
+}
+
+td:first-child {
+  border-right: 2px solid grey;
+}
+
+tbody tr {
+  border-top: 2px solid grey;
+  background-color: rgb(238, 229, 229);
+  color: gray;
+}
+
+tbody tr:nth-child(2n) {
+  background-color: white;
+}
+
+th:first-child {
+  border-top-left-radius: 5px;
+}
+
+th:last-child {
+  border-top-right-radius: 5px;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+td[data-currency='usd']::before {
+  content: '$ ';
+}
+
+td[data-currency='usd']::after {
+  content: ',000.00 ';
+}

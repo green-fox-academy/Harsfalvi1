@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-auto-rows: 200px;
+    grid-gap: 10px;
+    background-color: #b02aff;
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+    padding-right: 30px;
+
+}
+
+.side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffd62a;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #51d400;
+}
